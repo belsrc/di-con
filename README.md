@@ -3,6 +3,8 @@
 Simple IoC container library.
 
 ### Install
+-----
+
 ```bash
 npm i -S di-con
 ```
@@ -12,6 +14,7 @@ const container = require('di-con');
 ```
 
 ### Simple Classes
+-----
 
 With simple classes you simply ```bind``` and ```make``` them.
 
@@ -41,6 +44,7 @@ console.log(exampleOne === exampleTwo);
 ```
 
 ### Dependencies
+-----
 
 If the class needs dependencies you simply chain them onto the binding using the ```depends``` method. When ```make``` is called it will loop through the dependencies and try to resolve them.
 It first checks the other bound items, then it checks to see if it can ```require``` it from node_modules. If it can't find it in either of those places it just uses it as a literal.
@@ -79,6 +83,7 @@ depend.showDeps();
 ```depends``` saves its arguments as they are provided and injects them into the constructor in the same order.
 
 ### Singletons
+-----
 
 Like with dependencies, to make a singleton just chain the binding with the ```singleton``` method.
 
@@ -110,6 +115,7 @@ console.log(singleTwo.getTime());
 You can also, of course, chain off the ```depends``` method as well to make a singleton ```container.bind('', {}).depends('', '').singleton()```
 
 ### Types
+-----
 
 When binding a value, an attempt is made to infer the type of the value given, ```class``` or ```factory```. In the case of prototype constructor functions that doesn't necessarily work well. So you have the ability to tell the container what type you want the value to be treated as using the ```as``` method. There are three available types: ```class```, ```factory```, ```singleton```.
 
@@ -128,6 +134,7 @@ proto.yell();
 ```
 
 ### Factories
+-----
 
 Factory functions can also be bound to the container. Instead of giving a class constructor as the second argument, you give a function. The function will be called when you ```make``` it.
 
@@ -178,9 +185,10 @@ console.log(funcArg(10));
 // 50
 ```
 
-### API
+## API
 
 #### Container
+-----
 
 ##### register(name:String, value:Mixed)
 Register a binding with the container. Returns a new ```Binding```.
@@ -217,6 +225,7 @@ Determine if a given item is a factory.
 
 
 #### Binding
+-----
 
 ##### singleton()
 Mark the binding as a singleton. Returns the ```Binding```.
@@ -229,6 +238,7 @@ Set the type of the binding. Returns the ```Binding```.
 
 
 #### License
+-----
 
   di-con is licensed under the DBAD license.
 
