@@ -1,0 +1,33 @@
+{
+  "name": "di-con",
+  "version": "0.1.0",
+  "description": "A simple IoC container",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bryan Kizer",
+  "license": "DBAD",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belsrc/di-con.git"
+  },
+  "bugs": {
+    "url": "https://github.com/belsrc/di-con/issues"
+  },
+  "homepage": "https://github.com/belsrc/di-con#readme",
+  "keywords": [
+    "di",
+    "dependency",
+    "injection",
+    "injector",
+    "ioc",
+    "container",
+    "service",
+    "locator",
+    "dependency injection",
+    "dependency inversion",
+    "inversion of control",
+    "inversion of control container"
+  ]
+}
